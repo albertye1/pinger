@@ -6,7 +6,7 @@ use tokio::task::JoinSet;
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
-    let path = "index.html";
+    let path = "/usr/share/nginx/html/index.html";
     let mut output = File::create(path)?;
     let host_list = [
         "aly.sh",
