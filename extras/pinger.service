@@ -1,0 +1,11 @@
+[Unit]
+Description=the pinger
+
+[Service]
+WorkingDirectory=/root/pinger
+ExecStart=/root/.cargo/bin/cargo run
+Restart=on-failure
+RestartSet=5
+
+[Install]
+WantedBy=multi-user.target
